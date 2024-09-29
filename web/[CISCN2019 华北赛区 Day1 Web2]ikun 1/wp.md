@@ -8,7 +8,7 @@
 
 1.查看页面源码，发现提示
 
-![image-20240928215700643](/Users/alven/Documents/GitHub/ctf/web/图片截图/image-20240928215700643.png)
+![image-20240928215700643](../图片截图/image-20240928215700643.png)
 
 浏览页面，找到level 6的页面 181，
 
@@ -20,7 +20,7 @@ JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluMSJ9.kFKLac89rU
 
 得到密码是1kun
 
-![image-20240928220004976](/Users/alven/Documents/GitHub/ctf/web/图片截图/image-20240928220004976.png)
+![image-20240928220004976](../图片截图/image-20240928220004976.png)
 
 重新构建jwt 填回页面，找到
 
@@ -89,7 +89,7 @@ c__builtin__%0Aeval%0Ap0%0A%28S%22open%28%27/flag.txt%27%2C%27r%27%29.read%28%29
 
 替换become参数为上payload，得出
 
-![image-20240928223006263](/Users/alven/Documents/GitHub/ctf/web/图片截图/image-20240928223006263.png)
+![image-20240928223006263](../图片截图/image-20240928223006263.png)
 
 
 
